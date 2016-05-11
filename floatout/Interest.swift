@@ -11,21 +11,21 @@ import Firebase
 
 class Interest: NSObject {
     
-    let key: String
-    let name: String
+    let genre: String
+    let sInterests: [String]
     let addedByUser: Bool
     let ref: Firebase?
     
-    init(key: String, name: String, addedByUser:Bool){
-        self.key = key
-        self.name = name
+    init(genre: String, sInterests: [String], addedByUser:Bool){
+        self.genre = genre
+        self.sInterests = sInterests
         self.addedByUser = addedByUser
         self.ref = nil
     }
     
     init(snapshot: FDataSnapshot) {
-        key = snapshot.key
-        name = snapshot.value["name"] as! String
+        genre = snapshot.key
+        sInterests = snapshot.value["interests"] as! [String]
         addedByUser = snapshot.value["addedByUser"] as! Bool
         self.ref = snapshot.ref
     }

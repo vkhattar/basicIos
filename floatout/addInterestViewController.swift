@@ -49,10 +49,11 @@ class addInterestViewController: UIViewController, UITextFieldDelegate, UINaviga
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         //Saving the interest
         if saveButton === sender {
-            let key = mainInterest.text!
-            let name = subInterest.text!
+            let genre = mainInterest.text!
+            //lets create the subInterests array here from the subInterests textField
+            let sInterestsArray = subInterest.text!.componentsSeparatedByString("##")
             let userFlag = true
-            interest = Interest(key: key, name: name, addedByUser: userFlag)
+            interest = Interest(genre: genre, sInterests:sInterestsArray, addedByUser: userFlag)
         }
     }
     
