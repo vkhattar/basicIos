@@ -24,19 +24,8 @@
                                     <constraint firstAttribute="width" constant="202" id="eKk-62-F6b"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="87"/>
-                                <color key="textColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.99607843137254903" green="1" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Out" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEl-ei-bGn">
-                                <rect key="frame" x="229" y="207" width="142" height="96"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="96" id="2Ux-vL-qhz"/>
-                                    <constraint firstAttribute="width" constant="142" id="AnN-sm-74W"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="82"/>
-                                <color key="textColor" red="1" green="0.76859137536617428" blue="0.68803577585918307" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.30119189601129787" green="0.29959828809589417" blue="0.30278550392670156" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSB-PL-YnB">
                                 <rect key="frame" x="154" y="350" width="293" height="69"/>
@@ -53,8 +42,19 @@
                                     <segue destination="6Oj-Fb-ef6" kind="presentation" identifier="interestSegue" modalTransitionStyle="crossDissolve" id="wh7-aC-y77"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Out" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEl-ei-bGn">
+                                <rect key="frame" x="229" y="207" width="142" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="2Ux-vL-qhz"/>
+                                    <constraint firstAttribute="width" constant="142" id="AnN-sm-74W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="82"/>
+                                <color key="textColor" red="0.78025360223185658" green="0.78988050543077737" blue="0.79533253205128207" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.30119189601129787" green="0.29959828809589417" blue="0.30278550392670156" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.53474118590461339" blue="0.59567093581518327" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.45882352941176469" green="0.61176470588235299" blue="0.73333333333333328" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="pSB-PL-YnB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cbd-k4-U1l"/>
                             <constraint firstItem="pSB-PL-YnB" firstAttribute="top" secondItem="oEl-ei-bGn" secondAttribute="bottom" constant="47" id="deW-YL-p1Q"/>
@@ -109,6 +109,7 @@
                                 <connections>
                                     <outlet property="keyLabel" destination="85t-8y-oFD" id="RiM-3A-60E"/>
                                     <outlet property="nameLabel" destination="hJS-0o-Hqm" id="SQE-72-o6F"/>
+                                    <segue destination="xuc-AT-LtS" kind="show" id="jBP-Iw-GqX"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -127,7 +128,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgi-dR-gQG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-98" y="-492"/>
+            <point key="canvasLocation" x="-201" y="-489"/>
         </scene>
         <!--Float your interests-->
         <scene sceneID="VL6-HX-Ltd">
@@ -211,7 +212,89 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qKR-fR-OUJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="LOm-Qx-oSC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="615" y="-1352"/>
+            <point key="canvasLocation" x="447" y="-1480"/>
+        </scene>
+        <!--Places-->
+        <scene sceneID="R2E-Zo-2jE">
+            <objects>
+                <tableViewController title="Places" id="xuc-AT-LtS" customClass="PlacesViewController" customModule="floatout" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fx8-KS-kuq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaceTableViewCell" rowHeight="300" id="UtH-F9-CLL" customClass="PlaceTableViewCell" customModule="floatout" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="300"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UtH-F9-CLL" id="yzg-iS-u9c">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="299"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PianoMan" translatesAutoresizingMaskIntoConstraints="NO" id="QVV-69-EWc">
+                                            <rect key="frame" x="0.0" y="8" width="468" height="283"/>
+                                            <gestureRecognizers/>
+                                            <connections>
+                                                <outletCollection property="gestureRecognizers" destination="8JL-hn-M50" appends="YES" id="EzJ-2B-3Nz"/>
+                                            </connections>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overvu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ebo-DC-2Mg">
+                                            <rect key="frame" x="485" y="43" width="87" height="35"/>
+                                            <gestureRecognizers/>
+                                            <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="28"/>
+                                            <color key="textColor" red="0.62036568258039582" green="0.8709134615384615" blue="0.79706528335182303" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Today" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gu3-T1-A5b">
+                                            <rect key="frame" x="488" y="99" width="84" height="38"/>
+                                            <gestureRecognizers/>
+                                            <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="30"/>
+                                            <color key="textColor" red="0.98930288461538463" green="0.68214815223364755" blue="0.71637909171502978" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Exz-IA-dzb">
+                                            <rect key="frame" x="499" y="165" width="73" height="38"/>
+                                            <gestureRecognizers/>
+                                            <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="30"/>
+                                            <color key="textColor" red="0.3968349358974359" green="0.33171084504429565" blue="0.36715102435552049" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Gu3-T1-A5b" firstAttribute="leading" secondItem="QVV-69-EWc" secondAttribute="trailing" constant="20" id="6t5-fZ-mhU"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Ebo-DC-2Mg" secondAttribute="trailing" constant="20" id="AJ4-Ky-2tf"/>
+                                        <constraint firstItem="Exz-IA-dzb" firstAttribute="top" secondItem="Gu3-T1-A5b" secondAttribute="bottom" constant="28" id="T6e-le-gO7"/>
+                                        <constraint firstItem="Ebo-DC-2Mg" firstAttribute="trailing" secondItem="Gu3-T1-A5b" secondAttribute="trailing" id="WAj-Vh-pUW"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="QVV-69-EWc" secondAttribute="bottom" id="fei-n9-kZS"/>
+                                        <constraint firstItem="Ebo-DC-2Mg" firstAttribute="top" secondItem="yzg-iS-u9c" secondAttribute="topMargin" constant="35" id="rO7-zY-M0j"/>
+                                        <constraint firstItem="Gu3-T1-A5b" firstAttribute="trailing" secondItem="Exz-IA-dzb" secondAttribute="trailing" id="u52-u0-F1e"/>
+                                        <constraint firstItem="QVV-69-EWc" firstAttribute="leading" secondItem="yzg-iS-u9c" secondAttribute="leadingMargin" constant="-8" id="wZu-df-ENu"/>
+                                        <constraint firstAttribute="topMargin" secondItem="QVV-69-EWc" secondAttribute="top" id="wyg-05-X3w"/>
+                                        <constraint firstItem="Gu3-T1-A5b" firstAttribute="top" secondItem="Ebo-DC-2Mg" secondAttribute="bottom" constant="21" id="zJG-mf-hUy"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.46666666666666667" green="0.61176470588235299" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="placePicture" destination="QVV-69-EWc" id="QG9-mo-2uB"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xuc-AT-LtS" id="wVd-EP-eqd"/>
+                            <outlet property="delegate" destination="xuc-AT-LtS" id="Xj1-bp-zbA"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uUE-Dm-lvB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="23" id="hnB-ns-wKz">
+                    <rect key="frame" x="0.0" y="0.0" width="84" height="157"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </stackView>
+                <tapGestureRecognizer id="EaI-So-zVF"/>
+                <tapGestureRecognizer id="nlu-P7-op0"/>
+                <tapGestureRecognizer id="mpB-8t-rCX"/>
+                <tapGestureRecognizer id="8JL-hn-M50"/>
+            </objects>
+            <point key="canvasLocation" x="520" y="-489"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3hA-Z2-b7h">
@@ -229,7 +312,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1s-X3-fyx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-84" y="-1514"/>
+            <point key="canvasLocation" x="-219" y="-1498"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="PianoMan" width="307" height="307"/>
+    </resources>
 </document>
