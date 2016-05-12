@@ -230,13 +230,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="299"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PianoMan" translatesAutoresizingMaskIntoConstraints="NO" id="QVV-69-EWc">
-                                            <rect key="frame" x="0.0" y="8" width="468" height="283"/>
-                                            <gestureRecognizers/>
-                                            <connections>
-                                                <outletCollection property="gestureRecognizers" destination="8JL-hn-M50" appends="YES" id="EzJ-2B-3Nz"/>
-                                            </connections>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overvu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ebo-DC-2Mg">
                                             <rect key="frame" x="485" y="43" width="87" height="35"/>
                                             <gestureRecognizers/>
@@ -258,6 +251,13 @@
                                             <color key="textColor" red="0.3968349358974359" green="0.33171084504429565" blue="0.36715102435552049" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="PianoMan" translatesAutoresizingMaskIntoConstraints="NO" id="QVV-69-EWc">
+                                            <rect key="frame" x="8" y="8" width="460" height="283"/>
+                                            <gestureRecognizers/>
+                                            <connections>
+                                                <outletCollection property="gestureRecognizers" destination="8JL-hn-M50" appends="YES" id="EzJ-2B-3Nz"/>
+                                            </connections>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Gu3-T1-A5b" firstAttribute="leading" secondItem="QVV-69-EWc" secondAttribute="trailing" constant="20" id="6t5-fZ-mhU"/>
@@ -267,7 +267,7 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="QVV-69-EWc" secondAttribute="bottom" id="fei-n9-kZS"/>
                                         <constraint firstItem="Ebo-DC-2Mg" firstAttribute="top" secondItem="yzg-iS-u9c" secondAttribute="topMargin" constant="35" id="rO7-zY-M0j"/>
                                         <constraint firstItem="Gu3-T1-A5b" firstAttribute="trailing" secondItem="Exz-IA-dzb" secondAttribute="trailing" id="u52-u0-F1e"/>
-                                        <constraint firstItem="QVV-69-EWc" firstAttribute="leading" secondItem="yzg-iS-u9c" secondAttribute="leadingMargin" constant="-8" id="wZu-df-ENu"/>
+                                        <constraint firstItem="QVV-69-EWc" firstAttribute="leading" secondItem="yzg-iS-u9c" secondAttribute="leadingMargin" id="wZu-df-ENu"/>
                                         <constraint firstAttribute="topMargin" secondItem="QVV-69-EWc" secondAttribute="top" id="wyg-05-X3w"/>
                                         <constraint firstItem="Gu3-T1-A5b" firstAttribute="top" secondItem="Ebo-DC-2Mg" secondAttribute="bottom" constant="21" id="zJG-mf-hUy"/>
                                     </constraints>
