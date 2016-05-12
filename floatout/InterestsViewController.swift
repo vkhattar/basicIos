@@ -19,9 +19,9 @@ class InterestsViewController: UITableViewController {
     //MARK: Firebase properties
     //refer to the location in Firebase
     let ref = Firebase(url: "https://floatout.firebaseio.com/")
-    //stores current user ref
+    //stores current userRef
     var CurrentUserRef: Firebase!
-    //stores current user's interest ref
+    //stores current user's interestRef
     var currentUIR: Firebase!
 
     
@@ -43,30 +43,45 @@ class InterestsViewController: UITableViewController {
         CurrentUserRef = usersRef.childByAppendingPath(currentUser)
         currentUIR = CurrentUserRef.childByAppendingPath("interests")
         
-        //loading sample data
-        createSampleInterests()
+        //Updating the tableView with the data from Firebase
+        currentUIR.observeSingleEventOfType(.Value, withBlock: { snapshot in
+            for item in snapshot.children{
+                let genreInterestObj = Interest(snapshot: item as! FDataSnapshot)
+                self.interestStore.addInterest(genreInterestObj)
+            }
+            self.tableView.reloadData()
+            }, withCancelBlock: {error in print(error.description)})
     }
     
-    //This is called when the view is actually visitble and can be called multiple times during the lifecycle of a View Controller.
+    //This is called when the view is actually visible and can be called multiple times during the lifecycle of a View Controller.
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        //Updating the tableView with the data from Firebase
-        currentUIR.observeEventType(.Value, withBlock: { snapshot in
-            for item in snapshot.children{
-                print("hello \(item)")
-                
-            }
-            }, withCancelBlock: {error in print(error.description)})
     }
     
     //Editing the tableView.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            //Delete the row from the data source
+            
+            //Deleting from FireBase
+            let genreObject = interestStore.allInterests[indexPath.row]
+            genreObject.ref?.removeValue()
+            
+            //Delete the row from the interestStore
             interestStore.allInterests.removeAtIndex(indexPath.row)
+            
             //deleting it from the tableView
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
+    }
+    
+    //Waiting for the table to fetch data from fireBase
+    override func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String {
+        var message: String = ""
+        let numberOfRowsInSection: Int = self.tableView(self.tableView, numberOfRowsInSection: section)
+        if numberOfRowsInSection == 0 {
+            message = "Fetching data from Fire. Just wait godDamn it."
+        }
+        return message
     }
     
     //MARK: Data source for table view
@@ -115,12 +130,12 @@ class InterestsViewController: UITableViewController {
             else {
                 let newIndexPath = NSIndexPath(forRow: interestStore.allInterests.count, inSection: 0)
                 //adding the new interest to the store.
-                interestStore.allInterests.append(interest)
+                interestStore.addInterest(interest)
                 tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
                 
                 //Adding to Firebase.
                 let interestObject = [interest.genre : interest.sInterests]
-                fbAddInterest(interestObject)
+                fireAddInterest(interestObject)
             }
         }
     }
@@ -140,10 +155,10 @@ class InterestsViewController: UITableViewController {
         interestStore.addInterest(interest1)
         //Creating a sample interest
         let interestObject = ["Music":["Jazz","Blues"]]
-        fbAddInterest(interestObject)
+        fireAddInterest(interestObject)
     }
     
-    func fbAddInterest(interestObject : [String : Array<String>]){
+    func fireAddInterest(interestObject : [String : Array<String>]){
         currentUIR.updateChildValues(interestObject)
     }
 }

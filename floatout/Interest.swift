@@ -24,9 +24,9 @@ class Interest: NSObject {
     }
     
     init(snapshot: FDataSnapshot) {
-        genre = snapshot.key
-        sInterests = snapshot.value["interests"] as! [String]
-        addedByUser = snapshot.value["addedByUser"] as! Bool
+        self.genre = snapshot.key
+        self.sInterests = snapshot.value as! [String]
+        self.addedByUser = true
         self.ref = snapshot.ref
     }
 
