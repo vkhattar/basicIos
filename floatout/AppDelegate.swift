@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
+        //setting the interest store.
         let interestStore = InterestStore()
         let rootViewController = window?.rootViewController as! UINavigationController
         let interestsViewController = rootViewController.topViewController as! InterestsViewController

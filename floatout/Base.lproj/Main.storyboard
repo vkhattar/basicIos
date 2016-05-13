@@ -67,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-929" y="-1385"/>
+            <point key="canvasLocation" x="-1254" y="-1435"/>
         </scene>
         <!--Interests-->
         <scene sceneID="oj8-u0-1Rl">
@@ -109,7 +109,7 @@
                                 <connections>
                                     <outlet property="keyLabel" destination="85t-8y-oFD" id="RiM-3A-60E"/>
                                     <outlet property="nameLabel" destination="hJS-0o-Hqm" id="SQE-72-o6F"/>
-                                    <segue destination="xuc-AT-LtS" kind="show" id="jBP-Iw-GqX"/>
+                                    <segue destination="xuc-AT-LtS" kind="show" identifier="showPlaces" id="jBP-Iw-GqX"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -128,7 +128,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgi-dR-gQG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-201" y="-489"/>
+            <point key="canvasLocation" x="-560" y="-815"/>
         </scene>
         <!--Float your interests-->
         <scene sceneID="VL6-HX-Ltd">
@@ -212,7 +212,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qKR-fR-OUJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="LOm-Qx-oSC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="447" y="-1480"/>
+            <point key="canvasLocation" x="128" y="-1501"/>
         </scene>
         <!--Places-->
         <scene sceneID="R2E-Zo-2jE">
@@ -251,12 +251,9 @@
                                             <color key="textColor" red="0.3968349358974359" green="0.33171084504429565" blue="0.36715102435552049" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="PianoMan" translatesAutoresizingMaskIntoConstraints="NO" id="QVV-69-EWc">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QVV-69-EWc">
                                             <rect key="frame" x="8" y="8" width="460" height="283"/>
                                             <gestureRecognizers/>
-                                            <connections>
-                                                <outletCollection property="gestureRecognizers" destination="8JL-hn-M50" appends="YES" id="EzJ-2B-3Nz"/>
-                                            </connections>
                                         </imageView>
                                     </subviews>
                                     <constraints>
@@ -265,6 +262,7 @@
                                         <constraint firstItem="Exz-IA-dzb" firstAttribute="top" secondItem="Gu3-T1-A5b" secondAttribute="bottom" constant="28" id="T6e-le-gO7"/>
                                         <constraint firstItem="Ebo-DC-2Mg" firstAttribute="trailing" secondItem="Gu3-T1-A5b" secondAttribute="trailing" id="WAj-Vh-pUW"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="QVV-69-EWc" secondAttribute="bottom" id="fei-n9-kZS"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Exz-IA-dzb" secondAttribute="bottom" constant="88" id="lDr-J8-Y1Y"/>
                                         <constraint firstItem="Ebo-DC-2Mg" firstAttribute="top" secondItem="yzg-iS-u9c" secondAttribute="topMargin" constant="35" id="rO7-zY-M0j"/>
                                         <constraint firstItem="Gu3-T1-A5b" firstAttribute="trailing" secondItem="Exz-IA-dzb" secondAttribute="trailing" id="u52-u0-F1e"/>
                                         <constraint firstItem="QVV-69-EWc" firstAttribute="leading" secondItem="yzg-iS-u9c" secondAttribute="leadingMargin" id="wZu-df-ENu"/>
@@ -289,12 +287,8 @@
                     <rect key="frame" x="0.0" y="0.0" width="84" height="157"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </stackView>
-                <tapGestureRecognizer id="EaI-So-zVF"/>
-                <tapGestureRecognizer id="nlu-P7-op0"/>
-                <tapGestureRecognizer id="mpB-8t-rCX"/>
-                <tapGestureRecognizer id="8JL-hn-M50"/>
             </objects>
-            <point key="canvasLocation" x="520" y="-489"/>
+            <point key="canvasLocation" x="118" y="-791"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3hA-Z2-b7h">
@@ -312,10 +306,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1s-X3-fyx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-219" y="-1498"/>
+            <point key="canvasLocation" x="-574" y="-1553"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="PianoMan" width="307" height="307"/>
-    </resources>
 </document>

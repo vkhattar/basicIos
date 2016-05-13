@@ -17,6 +17,10 @@
 		EA82BCAA1CE1B96B00EEBF37 /* interestStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82BCA91CE1B96B00EEBF37 /* interestStore.swift */; };
 		EA82BCAC1CE1DBEE00EEBF37 /* InterestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82BCAB1CE1DBEE00EEBF37 /* InterestTableViewCell.swift */; };
 		EA92CEE71CE2141100B9DD57 /* addInterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA92CEE61CE2141100B9DD57 /* addInterestViewController.swift */; };
+		EA92CEEB1CE4849D00B9DD57 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA92CEEA1CE4849D00B9DD57 /* Place.swift */; };
+		EA92CEED1CE4905500B9DD57 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA92CEEC1CE4905500B9DD57 /* PlacesViewController.swift */; };
+		EA92CEF11CE4926800B9DD57 /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA92CEF01CE4926800B9DD57 /* PlaceTableViewCell.swift */; };
+		EA92CEF41CE4CFE800B9DD57 /* placeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA92CEF31CE4CFE800B9DD57 /* placeStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		EA82BCA91CE1B96B00EEBF37 /* interestStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = interestStore.swift; sourceTree = "<group>"; };
 		EA82BCAB1CE1DBEE00EEBF37 /* InterestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestTableViewCell.swift; sourceTree = "<group>"; };
 		EA92CEE61CE2141100B9DD57 /* addInterestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addInterestViewController.swift; sourceTree = "<group>"; };
+		EA92CEEA1CE4849D00B9DD57 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		EA92CEEC1CE4905500B9DD57 /* PlacesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
+		EA92CEF01CE4926800B9DD57 /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
+		EA92CEF31CE4CFE800B9DD57 /* placeStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = placeStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +98,8 @@
 		EA82BCA11CE1ABE400EEBF37 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				EA82BC9F1CE1ABD000EEBF37 /* InterestsViewController.swift */,
-				EA92CEE61CE2141100B9DD57 /* addInterestViewController.swift */,
+				EA92CEEF1CE491E000B9DD57 /* PlacesTable */,
+				EA92CEEE1CE491CE00B9DD57 /* InterestsTable */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -101,7 +109,6 @@
 			children = (
 				EA821F1A1CE0DFDA001A3C3F /* Main.storyboard */,
 				EA821F1F1CE0DFDA001A3C3F /* LaunchScreen.storyboard */,
-				EA82BCAB1CE1DBEE00EEBF37 /* InterestTableViewCell.swift */,
 			);
 			name = Layouts;
 			sourceTree = "<group>";
@@ -127,8 +134,29 @@
 			children = (
 				EA82BCA71CE1AD5200EEBF37 /* Interest.swift */,
 				EA82BCA91CE1B96B00EEBF37 /* interestStore.swift */,
+				EA92CEEA1CE4849D00B9DD57 /* Place.swift */,
+				EA92CEF31CE4CFE800B9DD57 /* placeStore.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		EA92CEEE1CE491CE00B9DD57 /* InterestsTable */ = {
+			isa = PBXGroup;
+			children = (
+				EA82BC9F1CE1ABD000EEBF37 /* InterestsViewController.swift */,
+				EA92CEE61CE2141100B9DD57 /* addInterestViewController.swift */,
+				EA82BCAB1CE1DBEE00EEBF37 /* InterestTableViewCell.swift */,
+			);
+			name = InterestsTable;
+			sourceTree = "<group>";
+		};
+		EA92CEEF1CE491E000B9DD57 /* PlacesTable */ = {
+			isa = PBXGroup;
+			children = (
+				EA92CEEC1CE4905500B9DD57 /* PlacesViewController.swift */,
+				EA92CEF01CE4926800B9DD57 /* PlaceTableViewCell.swift */,
+			);
+			name = PlacesTable;
 			sourceTree = "<group>";
 		};
 		EE2D01F176FE935878B8E883 /* Pods */ = {
@@ -263,8 +291,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA82BCA01CE1ABD000EEBF37 /* InterestsViewController.swift in Sources */,
+				EA92CEF41CE4CFE800B9DD57 /* placeStore.swift in Sources */,
+				EA92CEEB1CE4849D00B9DD57 /* Place.swift in Sources */,
 				EA82BCAC1CE1DBEE00EEBF37 /* InterestTableViewCell.swift in Sources */,
 				EA92CEE71CE2141100B9DD57 /* addInterestViewController.swift in Sources */,
+				EA92CEF11CE4926800B9DD57 /* PlaceTableViewCell.swift in Sources */,
+				EA92CEED1CE4905500B9DD57 /* PlacesViewController.swift in Sources */,
 				EA82BCAA1CE1B96B00EEBF37 /* interestStore.swift in Sources */,
 				EA821F171CE0DFDA001A3C3F /* AppDelegate.swift in Sources */,
 				EA82BCA81CE1AD5200EEBF37 /* Interest.swift in Sources */,

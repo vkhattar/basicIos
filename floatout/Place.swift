@@ -16,13 +16,15 @@ class Place : NSObject {
     let genre: String
     let addedByUser: Bool?
     let image: UIImage?
+    let subGenre: [String]
     
-    init(name: String, location: String, genre: String, image: UIImage?, addedByUser: Bool?){
+    init(name: String, location: String, genre: String, image: UIImage?, addedByUser: Bool?, subGenre: [String]){
         self.name = name
         self.location = location
         self.genre = genre
         self.image = image
         self.addedByUser = false
+        self.subGenre = subGenre
     }
     
     init(snapshot: FDataSnapshot){
@@ -30,7 +32,8 @@ class Place : NSObject {
         self.location = snapshot.value["location"] as! String
         self.genre = snapshot.value["genre"] as! String
         self.image = snapshot.value["image"] as? UIImage
-        self.addedByUser = true
+        self.addedByUser = false
+        self.subGenre = snapshot.value["subGenre"] as! [String]
     }
 }
 

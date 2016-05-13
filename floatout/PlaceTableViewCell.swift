@@ -17,4 +17,6 @@ class PlaceTableViewCell: UITableViewCell {
     @IBOutlet weak var today: UILabel!
     
     @IBOutlet weak var overvu: UILabel!
+    
+    
 }

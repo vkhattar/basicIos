@@ -24,7 +24,6 @@ class InterestsViewController: UITableViewController {
     //stores current user's interestRef
     var currentUIR: Firebase!
 
-    
     //MARK: Overriding views
     //viewDidLoad is called exactly once, when the view controller is firsst loaded into memory. This is where you want to instantiate any instance variables and build any views that live for the entire lifeCycle.
     override func viewDidLoad() {
@@ -51,6 +50,7 @@ class InterestsViewController: UITableViewController {
             }
             self.tableView.reloadData()
             }, withCancelBlock: {error in print(error.description)})
+      
     }
     
     //This is called when the view is actually visible and can be called multiple times during the lifecycle of a View Controller.
@@ -115,6 +115,14 @@ class InterestsViewController: UITableViewController {
         cell.layer.borderWidth = 1.0
     
         return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showPlaces" {
+            let placesVc = segue.destinationViewController as! PlacesViewController
+            let placeStore = PlaceStore()
+            placesVc.placeStore = placeStore
+        }
     }
     
     //MARK: IB METHODS
