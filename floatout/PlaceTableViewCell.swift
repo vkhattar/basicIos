@@ -12,11 +12,9 @@ class PlaceTableViewCell: UITableViewCell {
     //Mark: Properties
     @IBOutlet weak var placePicture: UIImageView!
     
-    @IBOutlet weak var yday: UILabel!
-
-    @IBOutlet weak var today: UILabel!
+    @IBOutlet weak var overvu: UIButton!
     
-    @IBOutlet weak var overvu: UILabel!
+    @IBOutlet weak var today: UIButton!
     
-    
+    @IBOutlet weak var yday: UIButton!
 }

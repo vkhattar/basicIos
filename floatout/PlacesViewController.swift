@@ -9,10 +9,11 @@
 import UIKit
 import Firebase
 
-class PlacesViewController: UITableViewController {
+class PlacesViewController: UITableViewController{
     
     //MARK: Properties
     var placeStore:PlaceStore!
+    var queryValue: String!
     
     //MARK: Firebase properties
     
@@ -33,7 +34,9 @@ class PlacesViewController: UITableViewController {
         placesRef = ref.childByAppendingPath("places")
 
         //Updating the tableView with the places listed from Firebase
-        placesRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
+        //Querying MUSIC GENRE HERE. NEeds to be dynamic. change it
+        let queryKey = "genre"
+        placesRef.queryOrderedByChild(queryKey).queryEqualToValue(queryValue).observeSingleEventOfType(.Value, withBlock: { snapshot in
             for item in snapshot.children{
                 let place = Place(snapshot: item as! FDataSnapshot)
                 self.placeStore.addPlace(place)
@@ -74,7 +77,11 @@ class PlacesViewController: UITableViewController {
         return cell
     }
     
+
+    
     //MARK: Methods
+    
+    //Just used initially to fill in the Fire Data base.
     func addSamplePlaces() {
         let place1 = Place(name: "PianoMan", location: "DeerPark",
                            genre: "Music", image: nil, addedByUser: false,
@@ -95,7 +102,6 @@ class PlacesViewController: UITableViewController {
         for place in placeStore.allPlaces {
             addPlaceToFire(place)
         }
-     
     }
     
     //image resizing//http://stackoverflow.com/questions/2658738/the-simplest-way-to-resize-an-uiimage
@@ -116,3 +122,19 @@ class PlacesViewController: UITableViewController {
         placesRef.updateChildValues(placeObject)
     }
 }
+
+//setting a gesture in a tableview cell
+//setting the gesture recognizer on today label
+//        let todayTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(PlacesViewController.todayTap(_:)))
+//        cell.today!.tag = indexPath.row
+//        todayTapRecognizer.numberOfTapsRequired = 1
+//        todayTapRecognizer.delegate = self
+//        cell.today!.userInteractionEnabled = true
+//        cell.today!.addGestureRecognizer(todayTapRecognizer)
+
+
+//    func todayTap(gesture: UITapGestureRecognizer){
+//        let indexPath = NSIndexPath(forRow: gesture.view!.tag, inSection: 0)
+//        let cell = tableView.cellForRowAtIndexPath(indexPath) as! PlaceTableViewCell
+//        print(cell.yday.text)
+//    }

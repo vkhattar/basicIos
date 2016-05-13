@@ -119,9 +119,14 @@ class InterestsViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showPlaces" {
+//            let nav = segue.destinationViewController as! UINavigationController
+//            let placesVc = nav.topViewController as! PlacesViewController
             let placesVc = segue.destinationViewController as! PlacesViewController
             let placeStore = PlaceStore()
             placesVc.placeStore = placeStore
+            //need to set the queryValue field for places. So for example) On click Music, only music related places are to be shown.
+            let interestCell = sender as! InterestTableViewCell
+            placesVc.queryValue = interestCell.keyLabel.text
         }
     }
     
