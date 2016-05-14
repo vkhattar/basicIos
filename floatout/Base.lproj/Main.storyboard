@@ -240,7 +240,7 @@
                                                 <attributedString key="attributedTitle">
                                                     <fragment content="Overvu">
                                                         <attributes>
-                                                            <color key="NSColor" red="0.87473616019884137" green="1" blue="0.64955663581998202" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="NSColor" red="1" green="0.39450114882172405" blue="0.63406823852076544" alpha="1" colorSpace="calibratedRGB"/>
                                                             <font key="NSFont" size="25" name="BradleyHandITCTT-Bold"/>
                                                         </attributes>
                                                     </fragment>
@@ -264,7 +264,7 @@
                                             <rect key="frame" x="495" y="125" width="84" height="50"/>
                                             <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="30"/>
                                             <state key="normal" title="Today">
-                                                <color key="titleColor" red="0.98930288460000004" green="0.68214815220000002" blue="0.71637909170000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleColor" red="0.86616584666819207" green="0.43896855331550777" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                             <connections>
                                                 <segue destination="GdQ-Ad-oYN" kind="show" identifier="today" id="jRO-29-ExA"/>
@@ -288,7 +288,7 @@
                                         <constraint firstAttribute="topMargin" secondItem="QVV-69-EWc" secondAttribute="top" id="wyg-05-X3w"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.62891577034856805" green="0.90013873073567108" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.80392156862745101" green="1" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="overvu" destination="7bi-vi-OHY" id="HHD-KR-boj"/>
                                     <outlet property="placePicture" destination="QVV-69-EWc" id="QG9-mo-2uB"/>
@@ -384,7 +384,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Its a birthday sex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLE-YC-NgH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Its a birthday sex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLE-YC-NgH">
                                 <rect key="frame" x="33" y="256" width="534" height="88"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="73"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -393,8 +393,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.98774038460000002" green="0.77155376769999995" blue="0.7048836221" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="ZLE-YC-NgH" firstAttribute="centerX" secondItem="C56-jo-J2I" secondAttribute="centerX" id="2RD-X5-7Zw"/>
-                            <constraint firstItem="ZLE-YC-NgH" firstAttribute="centerY" secondItem="C56-jo-J2I" secondAttribute="centerY" id="Bv7-Uo-TcU"/>
+                            <constraint firstItem="ZLE-YC-NgH" firstAttribute="centerX" secondItem="C56-jo-J2I" secondAttribute="centerX" id="CMk-qm-MwE"/>
+                            <constraint firstItem="ZLE-YC-NgH" firstAttribute="leading" secondItem="C56-jo-J2I" secondAttribute="leadingMargin" constant="13" id="SUh-YU-4Sy"/>
+                            <constraint firstItem="ZLE-YC-NgH" firstAttribute="centerY" secondItem="C56-jo-J2I" secondAttribute="centerY" id="Umr-OK-d3B"/>
                         </constraints>
                     </view>
                 </viewController>
