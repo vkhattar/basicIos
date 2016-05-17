@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '6292CBC8905EFAA74CE26FD5'
+               BlueprintIdentifier = '194A70B7AF5474A649C63B06'
                BlueprintName = 'Pods-floatout'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_floatout.framework'>
